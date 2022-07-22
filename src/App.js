@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import './App.css';
 import Compteur from './components/CptView/Compteur';
 import Compteur2 from './components/CptView/Compteur2';
@@ -10,13 +10,15 @@ import DataContextProvider from './DataContext';
 
 
 function App() {
+
   return (
     <div className="App">
         <DataContextProvider>
-        {/* <Compteur />
+        <Compteur />
         <Compteur2 />
-        <Todo></Todo> */}
-        <SearchForm></SearchForm>
+        <Todo></Todo>
+        {/* <CommentsView></CommentsView> */}
+        <SearchForm onClick={(message)=>console.log("valeur récup"+{message})}></SearchForm>
         </DataContextProvider>
 
       {/* <CommentsView></CommentsView> */}
